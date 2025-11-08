@@ -212,5 +212,28 @@
     if (e.target === modal) modal.style.display = "none";
   };
 </script>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* スマホ画面（600px以下）用の調整 */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.4em;
+    }
+    .columns {
+      display: block;
+    }
+  }
+</style>
+
 </body>
 </html>
