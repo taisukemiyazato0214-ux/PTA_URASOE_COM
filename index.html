@@ -254,43 +254,45 @@
     text-align: left; /* ← これでリスト全体を左寄せに */
   }
 
-/* 🌟 スマホ表示でも横並びを維持して崩れないようにする */
 @media (max-width: 600px) {
   header {
-    font-size: 16px;          /* タイトル文字を小さく */
-    white-space: nowrap;      /* 改行させない */
-    overflow: hidden;         /* はみ出したら隠す */
+    padding: 10px;
   }
 
   .title {
-    flex-wrap: nowrap; /* 折り返さない */
-    gap: 6px;          /* ロゴと文字の間を詰める */
+    display: flex;
     align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;    /* 折り返し禁止 */
+    justify-content: flex-start;
   }
 
   .logo {
     width: 36px;
     height: 36px;
+    flex-shrink: 0;       /* 縮まらないように固定 */
     font-size: 14px;
   }
 
   h1 {
-    font-size: 16px;          /* タイトル文字を小さく */
-    white-space: nowrap;      /* 改行させない */
-    overflow: hidden;         /* はみ出したら隠す */
-    text-overflow: ellipsis;  /* 長すぎる場合「…」表示 */
+    font-size: 14px;      /* 小さくして収める */
+    flex-shrink: 1;       /* 親幅に合わせて縮む */
+    white-space: nowrap;  /* 改行禁止 */
+    overflow: hidden;     
+    text-overflow: ellipsis; /* はみ出したら「…」 */
   }
 
   .meta {
-    flex-direction: column;   /* 日時・会場カードは縦並びに */
+    flex-direction: column; /* 日時・会場カードは縦並び */
     gap: 6px;
   }
 
   nav a {
-    font-size: 14px;          /* ナビも少し小さく */
+    font-size: 14px;
     padding: 6px 10px;
   }
 }
+
 
 </style>
 
