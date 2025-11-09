@@ -230,21 +230,6 @@
     margin: auto;
   }
 
-  /* スマホ画面（600px以下）用の調整 */
-  @media (max-width: 600px) {
-    header {
-    padding: 600px;
-  }
-    h1 {
-      font-size: 1.4em;
-    }
-    .columns {
-      display: block;
-    }
-  }
-</style>
-
-<style>
   .stage-title {
     font-family: "RocknRoll One", sans-serif;
     font-size: 1.8em;
@@ -269,6 +254,44 @@
     text-align: left; /* ← これでリスト全体を左寄せに */
   }
 </style>
+
+/* 🌟 スマホ対応調整 */
+/* 🌟 スマホ表示でも横並びを維持して崩れないようにする */
+@media (max-width: 600px) {
+  header {
+    padding: 10px; /* ヘッダの余白を小さく */
+  }
+
+  .title {
+    flex-wrap: nowrap; /* 折り返さない */
+    gap: 6px;          /* ロゴと文字の間を詰める */
+    align-items: center;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 16px;          /* タイトル文字を小さく */
+    white-space: nowrap;      /* 改行させない */
+    overflow: hidden;         /* はみ出したら隠す */
+    text-overflow: ellipsis;  /* 長すぎる場合「…」表示 */
+  }
+
+  .meta {
+    flex-direction: column;   /* 日時・会場カードは縦並びに */
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 14px;          /* ナビも少し小さく */
+    padding: 6px 10px;
+  }
+}
+
 
 </body>
 </html>
