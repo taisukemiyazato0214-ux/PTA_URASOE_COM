@@ -8,9 +8,27 @@
   <style>
     :root{--accent:#005bac;--light:#e8f0fb;--muted:#5a6470;--bg:#f9fbfd}
     *{box-sizing:border-box}
-    body{font-family:"Yu Gothic",Meiryo,"Hiragino Kaku Gothic ProN",sans-serif;margin:0;color:#111;background:var(--bg);}
-    .container{width:100%;margin:0 auto;padding:20px}
-    header{background:linear-gradient(135deg,#fff 0%, var(--light) 100%);border-radius:12px;padding:12px;width: 100%;box-sizing: border-box;margin-bottom:20px;box-shadow:0 6px 18px rgba(10,10,10,0.06)}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ← 横スクロール防止 */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;          /* container内で横幅いっぱい */
+  padding: 12px;        /* containerのパディングと同じ */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 12px;  /* 角丸はそのまま */
+  box-shadow: 0 6px 18px rgba(10,10,10,0.06);
+}
 .title {
   display: flex;          /* ← まずflexを指定 */
   flex-wrap: wrap;        /* ← 折り返し許可 */
@@ -42,32 +60,29 @@
   </style>
 </head>
 <body>
+
   <div class="container">
-    <header>
-      <div class="title">
-        <div class="logo">祭</div>
-        <div>
-          <h1>第二回 浦添市PTAコミュニティフェスタ</h1>
-          <p class="lead"></p>
-          <div class="meta">
-            <div class="card">日時：<strong>2025年11月24日</strong></div>
-            <div class="card">会場：<strong>組踊公園</strong></div>
-          </div>
-        </div>
-      </div>
-      <nav>
-        <a href="#about">概要</a>
-        <a href="#program">プログラム</a>
-        <a href="#access">アクセス</a>
-        <a href="#notes">注意事項</a>
-      </nav>
-    </header>
 
     <div class="grid">
       <main>
 
         <section id="about">
                 <ul class="all">
+    <section id="top">
+      <header>
+        <div class="title">
+          <div class="logo">祭</div>
+          <div>
+            <h1>第二回 浦添市PTAコミュニティフェスタ</h1>
+            <p class="lead"></p>
+            <div class="meta">
+              <div class="card">日時：<strong>2025年11月24日</strong></div>
+              <div class="card">会場：<strong>組踊公園</strong></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
 
           <h2>イベント概要</h2>
           <p>「第二回浦添市PTAコミュニティフェスタ」は、地域・学校・家庭のつながりを深めるために開催される交流イベントです。エイサーや獅子舞、ダンス、リコーダー演奏など、多彩なステージパフォーマンスをお楽しみいただけます。さらに、人気のキッチンカーも出店予定！家族みんなで楽しい時間を過ごしましょう。</p>
@@ -87,16 +102,18 @@
           <h2 class="stage-title">🎤 ステージプログラム 🎶</h2>
           <ul class="stage-list">
             <li>11:00　開会式（実行委員）</li>
-            <li>11:05　ダンスパフォーマンス（神森中学校）</li>
             <li>11:25　ダンスパフォーマンス（パステル学童クラブ）</li>
             <li>11:40　リコーダー演奏（宮城小学校）</li>
 
             <li>13:00　ハンター</li>
-            <li>13:15　講和</li>
+            <li>13:15　講話</li>
             <li>13:40　じゃんけん大会</li>
             <li>14:00　獅子舞演舞（内間小学校）</li>
             <li>14:15　演舞、歌（港川小学校）</li>
             <li>14:30　エイサー演舞（内間小学校）</li>
+            <li>14:50　鬼滅の刃踊り隊（港川中学校）</li>
+            <li>15:10　ダンスパフォーマンス（神森中学校）</li>
+            <li>15:30　獅子舞演舞（神森学童）</li>
             <li>15:45　閉会式（実行委員）</li>
           </ul>
           <p>※内容・時間は変更になる場合があります。</p>
